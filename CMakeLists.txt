@@ -237,7 +237,11 @@ endif()
 
 #-------------------------------------------------------------------------------
 # set up build directories
-set(dir ${CMAKE_CURRENT_SOURCE_DIR})
+if(MSVC)
+	set(dir ${CMAKE_CURRENT_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE})
+else()
+	set(dir ${CMAKE_CURRENT_SOURCE_DIR})
+endif()
 set(EXECUTABLE_OUTPUT_PATH ${dir} CACHE PATH "Build directory" FORCE)
 set(LIBRARY_OUTPUT_PATH ${dir} CACHE PATH "Build directory" FORCE)
 

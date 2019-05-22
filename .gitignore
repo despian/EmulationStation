@@ -40,3 +40,10 @@ Makefile
 CPackConfig.cmake
 CPackSourceConfig.cmake
 *.cbp
+
+# Visual Studio
+.vs
+CMakeSettings.json
+
+# External libraries
+lib
